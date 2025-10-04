@@ -1,8 +1,7 @@
 from dotenv import load_dotenv
+load_dotenv()
 # Graph
 from src.graph.builder import create_graph
-
-load_dotenv()
 
 graph = create_graph()
 
