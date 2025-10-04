@@ -2,8 +2,18 @@ from dotenv import load_dotenv
 load_dotenv()
 # Graph
 from src.graph.builder import create_graph
+# Visualize graph
 
 graph = create_graph()
+
+# Visualize the graph - save to file
+try:
+    png_data = graph.get_graph().draw_mermaid_png()
+    with open("graph_visualization.png", "wb") as f:
+        f.write(png_data)
+    print("Graph visualization saved to graph_visualization.png\n")
+except Exception as e:
+    print(f"Could not save graph visualization: {e}\n")
 
 def stream_graph_updates( user_input: str ):
     for event in graph.stream( { "messages": [ { "role": "user", "content": user_input } ] } ):
