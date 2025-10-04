@@ -19,6 +19,6 @@ if __name__ == "__main__":
                 print( "Exiting..." )
                 break
             stream_graph_updates( user_input )
-        except:
-            print( "An error occurred" )
+        except Exception as e:
+            print( f"An error occurred: { e }" )
             break

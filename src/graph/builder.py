@@ -8,7 +8,9 @@ from .registry import register_nodes
 from .topology import register_topology
 
 def create_graph():
+    print( "Creating graph" )
     graph_builder = StateGraph( State )
     register_nodes( graph_builder )
     register_topology( graph_builder )
+    print( "Graph created" )
     return graph_builder.compile()
