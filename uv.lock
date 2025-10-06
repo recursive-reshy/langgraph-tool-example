@@ -361,6 +361,7 @@ dependencies = [
     { name = "langgraph" },
     { name = "langsmith" },
     { name = "python-dotenv" },
+    { name = "requests" },
 ]
 
 [package.metadata]
@@ -370,6 +371,7 @@ requires-dist = [
     { name = "langgraph", specifier = ">=0.6.7" },
     { name = "langsmith", specifier = ">=0.4.31" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
+    { name = "requests", specifier = ">=2.32.5" },
 ]
 
 [[package]]
