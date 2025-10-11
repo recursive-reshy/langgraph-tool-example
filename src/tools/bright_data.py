@@ -9,7 +9,7 @@ BRIGHT_DATA_URL = "https://api.brightdata.com/request"
 
 def _make_api_request( url: str, **kwargs ):
     headers = {
-        "Authorization": f"Bearer { os.getenv( 'BRIGHT_DATA_API_KEY' ) }",
+        "Authorization": f"Bearer { os.getenv( 'BRIGHTDATA_API_KEY' ) }",
         "Content-Type": "application/json",
     }
 
@@ -40,6 +40,7 @@ def search_serp( query: str ) -> str:
         or None if the search fails
     """
     try:
+        print( f"Searching for query: { query }" )
         payload = {
             "zone": "langgraph_advance_example",
             # quote_plus function is used to encode the query string so that it can be used in the URL
